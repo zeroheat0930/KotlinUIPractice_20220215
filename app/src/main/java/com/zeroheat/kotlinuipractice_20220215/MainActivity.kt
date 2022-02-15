@@ -27,5 +27,35 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+        
+        
+//        입력한 숫자 추출.
+//        btnCalculate.setOnClickListener {
+//
+//            val inputNumber = edtNumber.text.toString().toInt() // 입력한문구를 > string으로> int 추가변환
+//
+////          숫자는 짝수인가? => 조건문 if문 활용
+//
+//            if (inputNumber % 2==0){
+//                Toast.makeText(this, "짝수입니다.", Toast.LENGTH_SHORT).show()
+//
+//            } else {
+//                Toast.makeText(this, "홀수입니다", Toast.LENGTH_SHORT).show()
+//            }
+//
+//        }
+
+        btnCalculate.setOnClickListener {
+            val  inputBirthYear = edtNumber.text.toString().toInt()
+
+//            2022년 나이를 계산.
+            val age = 2022 - inputBirthYear + 1
+
+//            이 사람은 올해 35세 입니다. => 숫자를 이용한 문장 가공?
+            Toast.makeText(this, "이 사람은 올해 ${age}세 입니다.", Toast.LENGTH_SHORT).show()
+
+        }
+
+
     }
 }
